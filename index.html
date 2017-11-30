@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Urban delta</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="main.css">
+    
+  </head>
+  <body>
+   
+      <!-- afbeelding boven aan -->
+      
+<img src="img/New-Orleans-Wallpapers-HD2.jpg" class="img-fluid" alt="Responsive image">
+
+    <!-- navigatie bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+    <a class="logo" href="index.html"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-center">
+        <li class="nav-item">
+        <a class="nav-link" href="#Introductie">Introductie</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#RMS">Rijn Maas Schelde delta</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Mississippi">Mississippi delta</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#Vergelijk"> Vergelijking</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Overons">Over ons</a>
+        </li>
+
+    </ul>
+  </div>
+</nav>
+    
+        <!-- introductie stuk -->
+    
+    <div class="container">
+    <div class="col-lg-12 introductie intro" id="Introductie">
+        <p>Welkom op de website van Nation of Deltas, wij zijn een bedrijf die zich vooral bezig houd met de Urban delta's verspreid over de Aarde. U zal vooral een beeld geschetst krijgen hoe het ervoor staat met de desbetreffende delta. Dit zal gedaan worden door middel van een vergelijkende structuur. Op deze pagina zal dat tussen de Mississippi delta en de Rijn maas Schelde delta plaatsvinden. Wij hopen u aan het einde een goed beeld te kunnen hebben geschetst. </p>
+        
+        <p>Als eerste wordt de Mississippi delta behandeld, dit wordt gedaan op basis van overbrengen van informatie met betrekking tot verschillende thema's. De thema's die aan het bod komen zijn: Stedelijkheid, Grondgebruik en de Transportnetwerken in het gebied. als tweede zal de RMS (Rijn, Maas, Schelde delta) aan bod komen. Uiteindelijk zal er een concluderende vergelijking plaatsvinden die een duidelijk beeld zal vormen hoe deze delta's tegenover elkaar staan</p>
+    </div>
+    </div>
+    
+<!-- titel MiSS -->
+    
+<div class="container Titel" id="Mississippi">
+ <h1> Mississippi delta</h1>
+    </div>
+<!-- nog meer blokjes -->
+    
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 Boxmiss">De Mississippi is al ruim 7000 jaar bezig met het uitslijten vna het landoppervlak in Amerika, met een lengte 3766 kilometer is het de tweede langste rivier ter wereld. Tijdens zijn weg van zijn oorsprong naar de monding doorkruist hij 10 van de Amerikaanse staten.</div>
+    <div class="col-sm-4 Mississippi" style="background-color:white;">afbeelding over de Mississippi</div>
+  </div>
+</div>
+    
+    
+
+    <!-- kaart RMS delta-->
+    <div id="mapRMS">
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <div id="mapRMS"></div>
+      <script>
+  //initialize the map         
+  var map = L.map('mapRMS').setView([51.661352, 4.383647], 8);
+  
+  //Create baselayer - tiles         
+  var backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
+    attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 19
+    }
+  );
+          //Marker
+  var Schelde = L.marker([51.404831, 4.046065]).addTo(map);
+  var Maas = L.marker([51.726675, 4.751972]).addTo(map);
+  var Rijn = L.marker([51.902147, 4.447957]).addTo(map);
+  var sport = L.marker([52.958061, 5.935926]).addTo(map);
+  backgroundMap.addTo(map);
+          
+          //pop up
+          var popup = "Rivier de Schelde is van groot belang voor Antwerpen, via deze toegang komen veel goederen binnen in België";
+Schelde.bindPopup(popup);
+          var popup = "De Maas is een aftakking van de oorspronkelijke Rijn, in deze kaart zijn de verschillende punten ook aangegeven als 2 verschillende rivieren. Echter zijn de Waal en de Nederrijn aftakkingen van de hoofdrivier";
+Maas.bindPopup(popup);
+          var popup = "Bij binnenkomst in Nederland vertakt de Rijn zich in meerdere riviertakken, De naam van de Rijn wordt nog wel mee genomen door de Nederrijn maar dit is een aftakking";
+Rijn.bindPopup(popup);
+          
+          //circle
+          var circle = L.circle([52.966786, 5.921486 ], 500, {
+  color: 'red',
+  fillColor: '#f03',
+  fillOpacity: 0.5
+}).addTo(map);
+          
+          // polygon
+          
+  var polygon = L.polygon([
+  [52.9605613, 5.9205217],
+  [52.966786, 5.921486],
+  [52.958061, 5.935926]
+]).addTo(map);
+
+          // Create a marker first
+var geojsonMarkerOptions = {
+  radius: 8,
+  fillColor: "#ff7800",
+  color: "#000",
+  weight: 1,
+  opacity: 1,
+  fillOpacity: 0.8
+};
+
+          // new Http Request
+var xhttp = new XMLHttpRequest();
+
+// set the request method and data file
+xhttp.open('GET', encodeURI("All_BFRO_Reports_points.geojson"));
+
+//specify what must be done with the geojson data to the layer when request is succesfull
+xhttp.onload = function() {
+  if (xhttp.readyState === 4) {
+      // add the json data to the geojson layer we created before!
+      geojson.addData(JSON.parse(xhttp.responseText));
+    } else {
+      alert('Request failed.  Returned status of ' + xhttp.status);
+    }
+};
+
+// send the request
+xhttp.send();
+          
+//create a empty geojson layer
+var geojson = L.geoJson(null,{
+  pointToLayer: function (feature, latlng) {
+    return L.circleMarker(latlng, geojsonMarkerOptions);
+  }
+}).addTo(map);
+</script>
+    </div>  
+    
+<!-- titel RMS delta-->
+    
+<div class="container Titel" id="RMS">
+   <h1>Rijn Maas Schelde delta</h1> 
+    </div>
+      <!-- afbeelding over de hele breedte -->
+    <div class= "rotterdam">
+        </div>
+<!-- blokstructuur 3 naast elkaar -->
+    
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8" style="background-color:darkseagreen;">  De Rijn en zijn vertakkingen zijn extreem groot belang voor Nederland, Deze rivieren voeren namelijk een grote hoeveelheid van het water af dat ons land binnenkomt vanuit de landen om ons heen. De oorsprong van de Rijn ligt in de Alpen, wanneer het water de Nederlandse grens bereikt is het al de snelhied er al flink uitgehaald. hierdoor zet het veel sediment af tijdens de reis die het maakt in ons land. Nederland is dan ook voor een groot deel ontstaan door dit soort afzetting, vandaar dat wij gerekend worden tot de delta's</div>
+    <div class="col-sm-4 Rijn" style="background-color:white;">.col-sm-4</div>
+  </div>
+</div>
+    
+    <!-- kaart over mississippi -->
+    <div id="mapMISS">
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <div id="mapMISS"></div>
+      <script>
+  //initialize the map         
+  var map = L.map('mapMISS').setView([36.984656, -89.173894], 4);
+  
+  //Create baselayer - tiles         
+  var backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
+    attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 19
+    }
+  );
+          //Marker
+  var oorsprong = L.marker([51.404831, 4.046065]).addTo(map);
+  var pieeeep = L.marker([51.726675, 4.751972]).addTo(map);
+  var pieeeeeep = L.marker([51.902147, 4.447957]).addTo(map);
+  var eindpunt = L.marker([52.958061, 5.935926]).addTo(map);
+  backgroundMap.addTo(map);
+          
+          //pop up
+          var popup = "Rivier de Schelde is van groot belang voor Antwerpen, via deze toegang komen veel goederen binnen in België";
+oorsprong.bindPopup(popup);
+          var popup = "De Maas is een aftakking van de oorspronkelijke Rijn, in deze kaart zijn de verschillende punten ook aangegeven als 2 verschillende rivieren. Echter zijn de Waal en de Nederrijn aftakkingen van de hoofdrivier";
+pieeeep.bindPopup(popup);
+          var popup = "Bij binnenkomst in Nederland vertakt de Rijn zich in meerdere riviertakken, De naam van de Rijn wordt nog wel mee genomen door de Nederrijn maar dit is een aftakking";
+eindpunt.bindPopup(popup);
+          
+          //circle
+          var circle = L.circle([52.966786, 5.921486 ], 500, {
+  color: 'red',
+  fillColor: '#f03',
+  fillOpacity: 0.5
+}).addTo(map);
+          
+          // polygon
+          
+  var polygon = L.polygon([
+  [52.9605613, 5.9205217],
+  [52.966786, 5.921486],
+  [52.958061, 5.935926]
+]).addTo(map);
+
+          // Create a marker first
+var geojsonMarkerOptions = {
+  radius: 8,
+  fillColor: "#ff7800",
+  color: "#000",
+  weight: 1,
+  opacity: 1,
+  fillOpacity: 0.8
+};
+        </script>
+    </div>
+    <!-- titel vergelijkende stuk -->
+    
+    <div class="container Titel" id="Vergelijk" >
+ <h1> Vergelijkend onderzoek</h1>
+    </div>
+
+<div class="Container">
+<div class="col-lg-12 vergelijking">
+    In dit deel van de website zal een vergelijking gegeven worden met betrekking tot de gevonden data over de 2 delta's. Het zal dus met behulp van verschillende soorten cijfers worden aangegeven hoe deze twee tegenover elkaar staan.
+</div>
+</div>
+
+<!-- tablad over ons -->
+     <div class="container Titel" id="Overons" >
+ <h1> Over Ons</h1>
+    </div>
+    
+    <div class="Container">
+<div class="col-lg-12 Overons">
+Tot slot nog een extra toevoeging over enkele eigenschappen van het bedrijf
+</div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
