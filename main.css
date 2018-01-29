@@ -1,0 +1,203 @@
+.img-fluid{width:100%;
+    height:5%;}
+
+/*.navbar {
+    position: fixed;
+}*/
+.navbar-nav.navbar-center {
+    position: absolute;
+    transform: translateX(35%);
+    font-size: 18px;
+}
+.intro { padding-top: 50px;
+padding-bottom: 30px}
+
+
+.logo
+{
+    content: url(img/Logo-def.png);
+    height: 80px;
+    width: 250px;
+}
+.Titel {
+    text-align: center;
+    font-family: serif;
+    
+}
+.lijn1{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.lijn2{
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.Boxmiss {
+    background-color: #b0aaab;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+}
+.boxrijn {
+    color: white;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+.boxmobi{
+    padding-top: 70px;
+    padding-bottom: 40px;
+    color: white;
+    background-color: #b0aaab;
+}
+.boxstedelijkheid{
+    padding-top: 70px;
+    padding-bottom: 0px;
+    color: white;
+    background-color: #b0aaab;
+}
+.boxlandgebruik{
+    padding-top: 80px;
+    padding-bottom: 1px;
+    color: white;
+    background-color: #b0aaab;
+}
+
+.boxmob1{
+    padding-top: 80px;
+    padding-bottom: 1px;
+    color: black;
+    background-color: white;
+}
+
+.vergelijkingmobi{
+    padding-top: 40px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+#mapRMS {height: 300px;
+width: 100%}
+
+#mapMISS {height: 300px;
+width: 100%}
+
+.geel{
+    background-color: grey;
+}
+
+.Mississippidelta{
+    content: url(img/msissss.jpg);
+    width: 34%;
+    height: 10%;
+    padding: 0px;
+}
+.Rijn{
+    content: url(img/rijn.jpg);
+    padding: 0px;
+    height: 10%;
+}
+
+.Mobiliteit{
+    content: url(img/mobiliteit.jpg);
+    width: 34%;
+    height: 10%;
+    padding: 0px;
+}
+
+
+
+.Stedelijkheid{
+    content: url(img/10.jpg);
+    width: 34%;
+    height: 10%;
+}
+
+.Landgebruik{
+    content: url(img/landgebruik.jpg);
+    width: 34%;
+    height: 10%;
+}
+
+.Mob1{
+    content: url(img/transport.png);
+    height: 10%;
+    width: 20%;
+}
+
+.Mob2{
+    content: url(img/transport2.png);
+    height: 10%;
+    width: 34%;
+
+}
+
+.Stedelijkheid1{
+    content: url(img/Correctmississ.jpg);
+    height: 10%;
+    width: 20%;
+}
+
+.Stedelijkheid2{
+    content: url(img/CorrectRMS.jpg);
+    height: 10%;
+    width: 20%
+}
+
+.Landgebruik1{
+    content: url(img/landuse1.jpg);
+    height: 10%;
+    width: 20%;
+}
+
+.Landgebruik2{
+    content: url(img/landuse2.jpg);
+    height: 10%;
+    width: 20%;
+}
+.blauw{
+    background-color: #b0aaab;
+}
+
+.oranje{
+    background-color: orange;
+}
+
+.paars{
+    content: url(img/river.jpg);
+    width: 33%;
+    height: 33%;
+}
+
+
+.groen{
+    background-color: green;
+}
+.rotterdam{
+    content: url(img/rotterdam2.jpg);
+    width: 100%;
+}
+.vergelijking{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.conclusie{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.Overons{   
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 70px;
+    padding-right: 70px;}
+    
+.footer{ 
+background-color: #b0aaab;
+padding-left: 50px;
+padding-right: 50px;
+color: white;
+width: 100%;}

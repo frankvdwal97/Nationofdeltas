@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <title>Nation of Deltas</title>
+   
+      <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Op deze website zult u een vergelijking vinden tussen de Mississippi delta en de Rijn Maas Schelde delta op basis van een aantal verschillende thema's">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="author" content="Frank van der Wal">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="main.css">
+    
+  </head>
+    
+  <body>
+   
+      <!-- afbeelding boven aan -->
+      
+<img src="img/New-Orleans-Wallpapers-HD2.jpg" class="img-fluid" alt="Responsive image">
+
+    <!-- navigatie bar -->
+  
+<nav class="navbar navbar-expand-lg navbar-light navbar fixed-top bg-light">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap"></a>
+    <a class="logo" href="index.html"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-center">
+        <li class="nav-item">
+        <a class="nav-link" href="#Mississippi">Mississippi delta</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#RMS">Rijn Maas Schelde delta</a>
+      </li>
+      
+       <li class="nav-item">
+        <a class="nav-link" href="#Vergelijk"> Vergelijking</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#Overons">Over ons</a>
+        </li>
+
+    </ul>
+  </div>
+</nav>
+        <!-- introductie stuk -->
+    
+    <div class="container">
+    <div class="col-lg-12 introductie intro" id="Introductie">
+        <p>Welkom op de website van Nation of Deltas, wij zijn een bedrijf die zich vooral bezig houdt met de urban deltas verspreid over de gehele wereld. U zal vooral een beeld geschetst krijgen hoe het ervoor staat met de desbetreffende delta. Dit zal gedaan worden door middel van een vergelijkende structuur. Op deze pagina zal dat tussen de Mississippi delta en de Rijn maas Schelde delta plaatsvinden. Wij hopen u na afloop een duidelijk beeld heeft gekregen van deze twee bijzondere deltas. </p>
+        
+        <p>Als eerste wordt de Mississippi delta behandeld, dit wordt gedaan op basis van overbrengen van informatie met betrekking tot verschillende thema's. De thema's die aan het bod komen zijn: Stedelijkheid, Grondgebruik en de Transportnetwerken in het gebied. als tweede zal de RMS (Rijn, Maas, Schelde delta) aan bod komen. Uiteindelijk zal er een concluderende vergelijking plaatsvinden die een duidelijk beeld zal vormen hoe deze delta's tegenover elkaar staan, deze wordt geplaatst na het inleidende stuk over het onderzoek.</p>
+        
+        <p>Veel grote wereldsteden liggen in een delta, strategische plaatsen met toegang tot de zee en tot het achterland. Dagelijks trekken wereldwijd 160.000 mensen van het platteland naar de grote stad. Geschat wordt dat binnen 15 jaar meer dan 60% van de wereldbevolking in grootstedelijke gebieden woont, hierdoor moeten de plaatselijke machthebbers wel een goed beeld hebben van wat er in de aankomende jaren allemaal te wachten staat.</p>
+    </div>
+    </div>
+    
+<!-- titel MiSS -->
+<div class=lijn1>
+<hr width="20%"size="22px" noshade>
+    </div>
+      
+      
+<div class="container Titel" id="Mississippi">
+ 
+ <h1> Mississippi delta</h1>
+    </div>
+<!-- nog meer blokjes -->
+    
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 Boxmiss">
+    
+        <p>De Mississippi is al ruim 7000 jaar bezig met het uitslijten van het landoppervlak in Amerika, met een lengte 3766 kilometer is het de tweede langste rivier ter wereld. Tijdens zijn weg van zijn oorsprong naar de monding doorkruist hij 10 van de Amerikaanse staten. De staat Louisianna heeft sinds de jaren 30 van de vorige eeuw al enorm veel land verloren, het gaat in dit geval om ruim 1900 vierkante miles.</p>
+      
+        <p>De Mississippi is een rivier die enorm veel sediment meeneemt tijdens zijn weg naar het zuiden, hierdoor heeft men in de loop van de jaren enorm veel werkzamheden moeten verrichten omdat de rivier simpelweg dichtslibte. Ten eerste werden de dijken verhoogd maar deze maatregel heeft niet geholpen. Dit heeft als gevolg dat de rivier nu hoger ligt dan de wijken die ernaast liggen, hierdoor vormt de rivier een groot gevaar wil de dijk breken.</p>
+      
+      </div>
+    <div class="col-sm-4 Mississippidelta" style="background-color:#b0aaab;">afbeelding over de Mississippi</div>
+  </div>
+</div>
+    
+    
+
+    <!-- kaart miss delta-->
+    <div id="mapMISS">
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <div id="mapMISS"></div>
+      <script>
+          
+  //initialize the map         
+  var map = L.map('mapMISS').setView([29.936802, -90.061400], 8);
+  map.scrollWheelZoom.disable()
+  //Create baselayer - tiles         
+  var backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
+    attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 19
+    }
+  );
+   
+          
+          
+          //Marker
+  var Neworleans = L.marker([29.936802, -90.061400]).addTo(map);
+  var Vliegveld1 = L.marker([30.044624, -90.026485]).addTo(map);
+  var Vliegveld2 = L.marker([29.992649, -90.263764]).addTo(map);
+  backgroundMap.addTo(map);
+          
+        //pop up
+          var popup = "De haven van New Orleans is heel anders vormgegeven dan de haven van Rotterdam, de haven is als het ware gesitueerd langs de oevers van de rivier. Het geeft dus een heel ander beeld dan de haven van Rotterdam waar er een heel gebied is voor gemaakt. ";
+Neworleans.bindPopup(popup);
+          var popup = "De stad New Orleans kent twee vliegvelden, dit vliegveld is bestemd voor de wat kleinere vliegtuigen en er gaan geen internationale vluchten";
+Vliegveld1.bindPopup(popup);
+          var popup = "Dit vliegveld is de internationale luchthaven van New Orleans, er gaan hier veel grotere vliegtuigen de lucht in als bij de kleinere luchthaven. Net zoals op Schiphol komt hier ook veel vracht binnen, het is tevens ook een mainport.";
+Vliegveld2.bindPopup(popup);
+          
+   
+
+
+         
+        </script>
+    </div>
+    
+<!-- titel RMS delta-->
+<div class=lijn2>
+<hr width="20%"size="5px" noshade>
+    </div>
+    
+<div class="container Titel" id="RMS">
+   <h1>Rijn Maas Schelde delta</h1> 
+    </div>
+      
+      <!-- afbeelding over de hele breedte -->
+    <div class= "rotterdam">
+        </div>
+      
+<!-- blokstructuur 3 naast elkaar -->
+    
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-8 boxrijn" style="background-color:#7ba13a;">  <p>De Rijn en zijn vertakkingen zijn extreem groot belang voor Nederland, Deze rivieren voeren namelijk een grote hoeveelheid van het water af dat ons land binnenkomt vanuit de landen om ons heen. De oorsprong van de Rijn ligt in de Alpen, wanneer het water de Nederlandse grens bereikt is het al de snelhied er al flink uitgehaald. hierdoor zet het veel sediment af tijdens de reis die het maakt in ons land. Nederland is dan ook voor een groot deel ontstaan door dit soort afzetting, vandaar dat wij gerekend worden tot de delta's</p>
+      
+      <p>De Rijn Maas Schelde delta heeft in het verleden al verscheidene keren te maken gekregen met de gevolgen van het water dat op desastreuse wijze buiten zijn overs treede, of dat de dijken gebroken waren. Op zo'n moment is het water de grootste vijand van de mens, het heeft dan ook voor onvoorstelbaar veel schade gezorgd. In de jaren daarna zijn er verschillende maatregelen genomen om het achterliggende land te beschermen tegen het water.</p>
+      
+      </div>
+    <div class="col-sm-4 Rijn" style="background-color:white;">.col-sm-4</div>
+  </div>
+</div>
+    
+    <!-- kaart over RMS -->
+    <div id="mapRMS">
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+      <script>
+          
+  //initialize the map         
+  var map = L.map('mapRMS').setView([51.661352, 4.383647], 7);
+  map.scrollWheelZoom.disable()
+  //Create baselayer - tiles         
+  var backgroundMap = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
+    attribution: '<a href="http://openstreetmap.org">OpenStreetMap</a>contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    maxZoom: 19
+    }
+  );
+          
+          //Marker
+  var Rotterdam = L.marker([51.949104, 4.097885]]).addTo(map);
+  var Schiphol = L.marker([52.304960, 4.756910]).addTo(map);
+  var Antwerpen = L.marker([51.272772, 4.346829]).addTo(map);
+  backgroundMap.addTo(map);
+          
+        //pop up
+          var popup = "De haven van Rotterdam is een enorm druk punt in de RMS delta, er komen dagelijk een tal van schepen aan om hun ladingen te lossen aan de kades van de haven. Door de enorme hoeveelheden aan goederenstromen kan deze locatie een mainport genoemd worden";
+Rotterdam.bindPopup(popup);
+          var popup = "Op schiphol is het elke dag een komen en gaan van mensen, hetzelfde geld voor de goederen die via deze luchthaven worden verscheept. Er worden elke dag enorm veel producten via de lucht getransporteerd, voor nederland gaat dit via schiphol.";
+Schiphol.bindPopup(popup);
+          var popup = "Voor België is Antwerpen een belangrijke haven, voordat de schepen in deze haven zijn moeten zij nog een aardig groot deel het land in varen via de Schelde. Deze schepen hebben veel vracht aan boord dat in Antwerpen gelost zal worden.";
+Antwerpen.bindPopup(popup);
+          
+        
+
+          
+          // new Http Request
+var xhttp = new XMLHttpRequest();
+
+// set the request method and data file
+xhttp.open('GET', encodeURI("All_BFRO_Reports_points.geojson"));
+
+//specify what must be done with the geojson data to the layer when request is succesfull
+xhttp.onload = function() {
+  if (xhttp.readyState === 4) {
+      // add the json data to the geojson layer we created before!
+      geojson.addData(JSON.parse(xhttp.responseText));
+    } else {
+      alert('Request failed.  Returned status of ' + xhttp.status);
+    }
+};
+
+// send the request
+xhttp.send();
+          
+//create a empty geojson layer
+var geojson = L.geoJson(null,{
+  pointToLayer: function (feature, latlng) {
+    return L.circleMarker(latlng, geojsonMarkerOptions);
+  }
+}).addTo(map);
+</script>
+    </div> 
+      
+      
+      
+      
+      
+    
+    <!-- titel vergelijkende stuk -->
+    <div class=lijn1>
+<hr width="20%"size="22px" noshade>
+    </div>
+    
+    <div class="container Titel" id="Vergelijk" >
+ <h1> Vergelijkend onderzoek</h1>
+    </div>
+
+<div class="Container">
+<div class="col-lg-12 vergelijking">
+    <p>Het onderzoek met betrekking tot de deltas is gericht op een aantal verschillende onderwerpen. Zo worden de beide delta’s met elkaar vergeleken op de volgende thema’s: landgebruik, transportnetwerken en bebouwing. De resultaten staan vermeld in tekstvorm en waar nodig verschillende afbeeldingen, kaarten of diagrammen voor verduidelijking. </p>
+    
+    <p>Het voornaamste thema waar op gefocust zal gaan worden is mobiliteit, Hoe is het geregeld in de beide delta's? Zijn er veel verschillen? Hoe zijn de verschillende mainports verspreid door de delta? Al zulk soort vragen zullen beantwoord gaan worden op deze website. Er zullen niet al te grote stukken tekst bij de onderwerpen staan zodat het geheel wel overzichtelijk blijft. De uitleg bevind zich naast of onder de bijbehorende afbeelding. Na afloop van het lezen zult u een duidelijk beeld hebben van wat er zoal speelt in deze delta's</p>
+</div>
+</div>
+    
+<!-- lijn1 -->  
+<div class=lijn1>
+<hr width="20%"size="22px" noshade>
+    </div>
+      
+  <div class="container Titel" id="conclusie" >
+ <h1> Conclusie</h1>
+    </div>
+
+      <div class="Container">
+<div class="col-lg-12 conclusie">
+    <p>De conculsie die getrokken kan worden uit het onderzoek dat gedaan is naar de Mississippi delta en de Rijn Maas Schelde delta is dat de Mississippi delta een gebied is dat over het geheel veel minder dichtbevolkt is dan de Rijn Maas Schelde delta, ook de verstedelijkingspatronen zijn een opvallend punt. De steden in de Amerikaanse delta zijn veel meer samengeklonterd als dan dat het is gesteld in de Nederlandse delta.</p>
+    
+    <p>Het landgebruik verschilt ook erg per delta, dit is voornamelijk veroorzaakt door de hoge mate van aanwezigheid van moerassen. Deze komen veel voor in de regio en zorgen ervoor dat die gebieden niet meer bruibaar zijn voor de landbouw.</p>
+    
+          </div>
+    
+    
+<!-- 3 boxen -->
+    <div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-8 boxmobi">  <p>Mobiliteit is een steeds grotere factor binnen het functioneren van onze samenleving, zonder mobiliteit kunnen wij ons immers niet verplaatsen en kunnen er ook geen goederen verplaatst worden van A naar B. Een ander deel van de mobiliteit die in deze vergelijking wordt meegenomen zijn de havengebieden die in deze deltas gevestigd zijn, zit er veel verschil tussen deze gebieden? Zo ja op welke gebieden. Er kunnen op veel verschillende manieren data achterhaald worden met betrekking tot de mobiliteit, het zal u dan ook duidelijk worden dat deze deltas elk een eigen manier van handelen hebben. </p>
+      
+      </div>
+    <div class="col-sm-4 Mobiliteit" style="background-color:#b0aaab;">.col-sm-4</div>
+  </div>
+</div>
+
+    
+    <div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-4 Stedelijkheid" style="background-color: #b0aaab;">.col-sm-4</div>
+      <div class="col-sm-8 boxstedelijkheid">  <p>De mate van stedelijkheid groeit met het jaar flink in de beide gebieden, waardoor komt dat precies? Sinds een aantal jarem woont meer dan 50% van de totale wereld bevolking in de steden. De verwachtingen zijn dat dat in de komende jaren gestaag door zal gaan stijgen. Er moet dus voldoende ruimte zijn voor al die mensen die in de komende periode naar de steden trekken. Wanneer de stad waar al deze mensen heentrekken in een delta ligt staat het plaatselijke bestuur voor een lastige keuze, het moet namelijk wel een veilige omgeving blijven waar al deze mensen samen veilig kunnen leven. Dit zal in de aankomende jaren voor veel steden een probleem gaan vormen. </p>
+      
+      </div>
+   </div>
+</div>
+    
+    
+    <div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-8 boxlandgebruik">  <p>Het landgebruik veranderd mee met de ontwikkelingen in deze steden. Het plaatselijke bestuur staat voor de keuze om land op te gaan offeren of om over te gaan op hoogbouw. In de centra van de steden is al vaak gekozen om te gaan voor de vorm van hoogbouw. Dit komt vooral doordat net buiten de steden vaak de landbouw gebieden al snel beginnen. In de RMS delta is dit zelfs samen met elkaar vermengd, soms gaat de stad over in landbouw gebieden die een aantal kilometer verderop weer overgaan in een nieuwe stad. </p>
+      
+      </div>
+    <div class="col-sm-4 Landgebruik" style="background-color:#b0aaab;">.col-sm-4</div>
+  </div>
+</div>
+      
+      
+<div class=lijn1>
+<hr width="20%"size="22px" noshade>
+    </div>
+      
+<div class="container Titel" id="mobiliteit" >
+ <h1> Mobiliteit</h1>
+    </div>
+
+    <div class="Container">
+<div class="col-lg-12 vergelijkingmobi">
+    <p>Zoals eerder al uitgelegd is er veel te vergelijken op het gebied van mobiliteit, de punten waar de twee deltas met elkaar op worden vergeleken zijn: </p>
+    
+    <ul>
+    <li>Mainports</li>
+    <li>Havens</li>
+    <li>Wegen</li>
+    <li>Files</li>
+    </ul>
+    
+    <p>De twee gebieden verschillen op een aantal gebieden sterk van elkaar, ten eerste in de totale grote van het gebied. De Mississippi delta is zo maar 18020 km2 in totaal terwijl de Rijn Maas Schelde delta in totaal 20012 km2 groot is. Er wonen aanzienlijk minder mensen in de Mississippi delta dan in de RMS delta 1.4 miljoen tegen 6.5 miloen, in verhouding zou er dus ook minder wegdek aanwezig kunnen zijn. Klopt dat ook?</p>
+    
+    <p>Qua wegstructuur verschillen de twee deltas niet erg veel van elkaar, de snelwegen bestaan bij ieder uit 2 of 3 baans wegen </p>
+     </div>
+   
+        
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-4 Mob1" style="background-color:white;">.col-sm-4</div>
+      <div class="col-sm-4 boxmob1">  <p> In de twee afbeeldingen hiernaast zijn de transportnetwerken in de deltas verwerkt, het valt op dat er in Nederland veel meer wegen zijn dan in de VS, dit komt doordat er in Nederland in verhouding veel meer mensen wonen per vierkante kilometer aan delta. In de Mississippi delta wonen respectievelijk 77.7 mensen per viekante kilometer, in de RMS delta is dit 324.8 mensen per vierkante kilometer. Een andere oorzaak voor het aantal wegen in de regio zal aan bod komen bij het onderdeel landgebruik.</p>
+      
+      </div>
+    <div class="col-sm-4 Mob2" style="background-color: white;">.col-sm-4</div>
+  </div>
+</div>
+        
+        <div class=lijn1>
+<hr width="20%"size="22px" noshade>
+    </div>
+    
+<div class="container Titel" id="stedelijkheid" >
+ <h1> Stedelijkheid</h1>
+    </div>      
+      
+<div class="Container">
+<div class="col-lg-12 vergelijkingmobi">
+   
+    <p>De stedelijkheid in deze twee deltas verschilt wel op veel vlakken van elkaar, denk hierbij bijvoorbeeld aan het patroon waarin de steden zijn gebouwd. In Amerika is het veel meer volgens een grid patroon opgesteld dan in Nederland waar het voornamelijk rond een oud deel van de stad is gebouwd als stadswijken. dit is een belangrijk verschil dat naar voren komt wanneer er wordt gekeken naar de opbouw van de steden New Orleans en Rotterdam.</p>
+    
+    <p>Een ander verschil in stedelijkheid tussen deze twee deltas is de verspreiding van de verschillende steden in het gebied. Zoals te zien is in de afbeeldingen die hieronder staan vermeld. In deze afbeeldingen is te zien waar de steden voornamelijk liggen, tevens bevatten de afbeelding een illustratie van welke delen van de delta boven zeeniveau liggen en welke onder het zeeniveau.</p>
+</div>
+</div>
+        
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-4 Stedelijkheid1" style="background-color:white;">.col-sm-4</div>
+      <div class="col-sm-4 boxmob1">  <p> In de twee afbeeldingen hiernaast is de stedelijkheid per gebied aangegeven, een groot verschil dat snel opvalt is dat in de RMS delta de steden veel meer verspreid over het totale gebied in plaats van geconcentreerd rond twee of drie plekken zoals dat in de Mississippi delta te zien is. </p>
+      
+      </div>
+    <div class="col-sm-4 Stedelijkheid2" style="background-color: white;">.col-sm-4</div>
+  </div>
+</div>
+</div>
+
+      <div class=lijn1>
+<hr width="20%"size="22px" noshade>
+      </div>
+  
+          
+
+ <div class="container Titel" id="landgebruik" >
+     <h1> landgebruik </h1>
+      </div>
+      
+<div class="Container">
+<div class="col-lg-12 vergelijkingmobi">
+   
+    <p>Het landgebruik in beide deltas verschilt ook erg van elkaar, dit komt mede doordat de Mississippi delta voor een groot deel bestaat uit moerasgebieden, dit zorgt er voor dat die gebieden zo goed als onbruikbaar zijn voor andere activiteiten.Hierdoor verschild de grootte van het aandeel dat de landbouw heeft in het gebied aanzienlijk, zo is in de Mississippi maar 10% van het totale gebied in gebruik door de landbouw. Bij de Rijn Maas Schelde delta is dit 77%, een erg groot verschil.</p>
+    </div> 
+    
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-4 Landgebruik1" style="background-color:white;">.col-sm-4</div>
+      <div class="col-sm-4 boxmob1">  <p> In de twee afbeeldingen hiernaast is een beeld geschetst van hoe het land wordt gebruikt in de twee deltas, er is al snel te zien dat zij erg van elkaar verschillen. De hoeveelheid groene gebieden die de agricultuur aanduiden in de gebieden zijn in veel minder mate aanwezig in de Mississippi delta. De landbouw vind daar vooral plaats rondom de rivier, in het binnenland is het in veel mindere mate aanwezig dan in Nederland. Het klimaat kan daar een oorzaak van zijn. </p>
+      
+      </div>
+    <div class="col-sm-4 Landgebruik2" style="background-color: white;">.col-sm-4</div>
+  </div>
+</div>
+<!-- tablad over ons -->
+<div class=lijn1>
+<hr width="20%"size="22px" noshade>
+    </div>
+    
+<div class="container Titel" id="Overons" >
+ <h1> Over Ons</h1>
+    </div>
+    
+    <div class="Container">
+<div class="col-lg-12 Overons">
+    <p>Het bedrijf Nation of Deltas is een bedrijf dat gespecialiseerd is op het gebied van deltas. Wij zijn werkzaam op alle continenten, de delta's komen namelijk in elk denkbaar wereld deel voor. Mede hierdoor werken wij met 6 filialen, deze zijn gevestigd in: Noord-Amerika, Zuid-Amerika, Europa, Afrika, Azië en Oceanië. Doordat wij door de jaren heen erg zijn verspreid op het gebied van vestigingen kunnen wij de gewenste diensten verlenen aan onze klanten.</p>
+    
+    <p>De werkzaamheden die wij kunnen verrichten zijn voornamelijk gericht op het monitoren of onderzoeken van de staat van een delta, dit doen wij voor een relatief hoog uurtarief omdat er weinig vakmensen zijn in de geo/bio branche die deze klussen kunnen uitvoeren. Het monitoren van de delta's gaat voornamelijk via allerlei digitale systemen die verspreid door de delta's zijn verspreid. Door deze systemen kunnen allerlei gegevens worden geanalyseerd en zo wordt het duidelijk wat er zoal is veranderd als gevolg van natuurlijke verschijnselen </p>
+    
+    <p>Voor een afspraak of offerte van de werkzaamheden die u wilt laten verrichten kunt u ons bereiken op de volgende manieren:</p>
+    
+
+</div>
+</div>
+    
+    <footer> 
+        <div class="footer">Telefoon: 06- 56 89 98 98 <br>
+        Email: Nationofdeltas@gmail.com
+        </div>       
+    </footer>
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
